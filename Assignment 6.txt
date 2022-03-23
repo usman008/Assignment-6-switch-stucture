@@ -1,0 +1,191 @@
+// Switch stucture
+
+
+//Program 5.23
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter Number : ');
+  String num1Str = stdin.readLineSync()!;
+  int? num1 = int.tryParse(num1Str);
+  if (num1 == null) {
+    print('Invalid Input');
+    return;
+  }
+
+  switch(num1){
+    case 1:
+    print('Friday');
+    break;
+    case 2:
+    print('Saturday');
+    break;
+    case 3:
+    print('Sunday');
+    break;
+    case 4:
+    print('Monday');
+    break;
+    case 5:
+    print('Tuesday');
+    break;
+    case 6:
+    print('Wednesday');
+    break;
+    case 7:
+    print('Thursday');
+  }
+  
+}
+
+//Program 5.24
+
+import 'dart:io';
+
+void main() {
+  stdout.write('Enter Character : ');
+  String character = stdin.readLineSync()!;
+  
+  switch (character) {
+    case 'A':
+    case 'a':
+
+    case 'E':
+    case 'e':
+
+    case 'I':
+    case 'o':
+
+    case 'O':
+    case 'o':
+
+    case 'U':
+    case 'u':
+      print('Vowel');
+      break;
+
+    default:
+      print('Constant');
+  }
+}
+
+
+//Program 5.25
+
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  double result;
+  stdout.write('Enter first floating Number : ');
+  String num1Str = stdin.readLineSync()!;
+  double? num1 = double.tryParse(num1Str);
+  if (num1 == null) {
+    print('Invalid Input');
+    return;
+  }
+  stdout.write('Enter Operator : ');
+  String ope = stdin.readLineSync()!;
+  if (ope.codeUnitAt(0) == 42 ||
+      ope.codeUnitAt(0) == 43 ||
+      ope.codeUnitAt(0) == 45 ||
+      ope.codeUnitAt(0) == 47) {
+    print(ope);
+  } else {
+    print('Error');
+    return;
+  }
+  stdout.write('Enter second floating Number  : ');
+  String num2Str = stdin.readLineSync()!;
+  double? num2 = double.tryParse(num2Str);
+  if (num2 == null) {
+    print('Invalid Input');
+    return;
+  }
+
+  switch (ope) {
+    case '+':
+      result = num1 + num2;
+      print('Result : $result');
+      break;
+    case '-':
+      result = num1 - num2;
+      print('Result : $result');
+      break;
+    case '*':
+      result = num1 * num2;
+      print('Result : $result');
+      break;
+    case '/':
+      result = num1 / num2;
+      print('Result : $result');
+      break;
+  }
+}
+
+
+//Program 5.26
+
+
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  int total;
+  stdout.write(
+      'Health Club Membership Menu \n 1:Standard Adult Membership \n 2:Child Membership \n 3:Senior Citizen Membership \n 4:Quit the program \n');
+
+  stdout.write('Enter Your Choice: ');
+  String choiceStr = stdin.readLineSync()!;
+  int? choice = int.tryParse(choiceStr)!;
+  if (choice > 0 && choice <= 4) {
+    if (choice == 4) {
+      print('Program Quit');
+      return;
+    }
+    print(choice);
+  } else {
+    print('Invalid input');
+    return;
+  }
+
+  stdout.write('For how many months: ');
+  String monthStr = stdin.readLineSync()!;
+  int? month = int.tryParse(monthStr);
+  if (month == null) {
+    print('Invalid Input');
+    return;
+  }
+
+  switch (choice) {
+    case 1:
+      total = 50 * month;
+      print('Total: $total');
+      break;
+    case 2:
+      total = 20 * month;
+      print('Total: $total');
+      break;
+    case 3:
+      total = 30 * month;
+      print('Total: $total');
+  }
+}
+
+
+//Program 5.27
+// error
+
+
+
+//Program 5.28
+// if stucture program
+
+
+//Program 5.29
+// if stucture program
+
+
+
+
